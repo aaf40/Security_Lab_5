@@ -2,7 +2,7 @@
 import hashlib, random, os, time
 from binascii import hexlify
 from socket import *
-import hw4_shared as ct 
+import lab6_support as ct 
 import dh
 
 #P and G are agreed upon by both Bob and Alice to be 13 and 9 respectively. They are not shared over a network connection, so Darth does not know about it.
