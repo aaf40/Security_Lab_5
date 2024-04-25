@@ -6,10 +6,10 @@ def power(a, b, p):
  
 def dh_generatePublicKey(P,G,privateKey):
     #Your code for this function (copy from your lab5 submission)
-    return(x)
+    return power(G, privateKey, P)
     
 def dh_generateSecretKey(publicKey, privateKey, P):
     #Your code for this function (copy from your lab5 submission)
-    return(k)
+    return power(publicKey, privateKey, P)
     
 
