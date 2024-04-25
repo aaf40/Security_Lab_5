@@ -35,6 +35,24 @@ def reversed_string(a_string):
     return a_string[::-1]
 
 def cipherEncrypt(inputText, n, d):
+    if d not in [1, -1] or n < 1:
+        return "Invalid n or d value"
     
-#Enter your code here for custom encryption from Lab 3
-    return result
+    valid_chars = [chr(i) for i in range(34, 127)]
+    encryptedText = ""
+    
+    inputText = inputText[::-1]
+    
+    for char in inputText:
+        if char in valid_chars:
+            index = valid_chars.index(char)
+            if d == 1:
+                shifted_index = (index + n) % len(valid_chars)
+            else:
+                shifted_index = (index - n) % len(valid_chars)
+            encryptedText += valid_chars[shifted_index]
+        else:
+            encryptedText += char
+    
+    return encryptedText
+

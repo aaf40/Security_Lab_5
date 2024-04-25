@@ -41,8 +41,10 @@ def main():
     addr = (host, port)
     UDPSock = socket(AF_INET, SOCK_DGRAM)
     UDPSock.setsockopt(SOL_SOCKET, SO_REUSEADDR, 1)
+    # UDPSock.setsockopt(SOL_SOCKET, SO_REUSEPORT, 1) # for running on linux
 
 # Enable broadcasting mode
+    # UDPSock.setsockopt(SOL_SOCKET, SO_REUSEPORT, 1) # for running on linux
     UDPSock.setsockopt(SOL_SOCKET, SO_BROADCAST, 1)
     UDPSock.bind(addr)
     print ("Waiting to received shared key from Alice...")
