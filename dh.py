@@ -1,6 +1,6 @@
 def power(a, b, p):
     if (b == 1):
-        return a;
+        return a % p
     else:
         return pow(a,b,p)
  

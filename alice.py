@@ -26,7 +26,7 @@ def encrypt(plaintext, usePKI, useDH, clientSecret):
     return msg
  
 def main():
-    host = "192.168.56.1" # set to IP address of target computer
+    host = "192.168.1.233" # set to IP address of target computer
     port = 8080
     addr = (host, port)
     UDPSock = socket(AF_INET, SOCK_DGRAM)

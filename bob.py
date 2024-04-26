@@ -33,18 +33,16 @@ def main():
     serverSecret = 0
 
   
-    # set the variables used for the server components
+   # set the variables used for the server components
     key = ""
-    host = "192.168.56.1"
+    host = "192.168.1.233"
     port = 8080
     buf = 1024 * 2
     addr = (host, port)
     UDPSock = socket(AF_INET, SOCK_DGRAM)
     UDPSock.setsockopt(SOL_SOCKET, SO_REUSEADDR, 1)
-    # UDPSock.setsockopt(SOL_SOCKET, SO_REUSEPORT, 1) # for running on linux
 
 # Enable broadcasting mode
-    # UDPSock.setsockopt(SOL_SOCKET, SO_REUSEPORT, 1) # for running on linux
     UDPSock.setsockopt(SOL_SOCKET, SO_BROADCAST, 1)
     UDPSock.bind(addr)
     print ("Waiting to received shared key from Alice...")
